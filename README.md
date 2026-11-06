@@ -2,6 +2,12 @@
 
 Prototype d'application mobile (iOS + Android) qui se connecte en Bluetooth Low Energy à une puce de suivi de frappe.
 
+<p>
+  <img src="docs/captures/1-accueil.png" width="250" alt="Accueil">
+  <img src="docs/captures/3-live.png" width="250" alt="Séance en direct">
+  <img src="docs/captures/4-bilan.png" width="250" alt="Bilan">
+</p>
+
 ## Ce que fait l'app
 
 - **Connexion au capteur** : recherche de la puce en Bluetooth, ou **simulateur** intégré pour faire des démos sans matériel.
