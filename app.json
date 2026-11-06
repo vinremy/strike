@@ -1,13 +1,17 @@
 {
   "expo": {
-    "name": "boxtrack",
+    "name": "BoxTrack",
     "slug": "boxtrack",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.boxtrack.app",
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "BoxTrack utilise le Bluetooth pour se connecter à ton capteur de frappe."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -16,10 +20,28 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.boxtrack.app",
+      "permissions": [
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "modes": [],
+          "bluetoothAlwaysPermission": "BoxTrack utilise le Bluetooth pour se connecter à ton capteur de frappe."
+        }
+      ],
+      "expo-router"
+    ],
+    "scheme": "boxtrack"
   }
 }
